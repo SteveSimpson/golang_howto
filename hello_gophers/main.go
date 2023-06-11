@@ -1,7 +1,10 @@
 // just a simple starter program
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
 	const name, age = "Todd", 42
@@ -9,6 +12,10 @@ func main() {
 	who := "GOphers"
 
 	emoji := "😜😎"
+
+	iVar := 42
+
+	dVar := 42.0
 
 	fmt.Printf("Hello %s%s!\n", who, emoji)
 
@@ -24,4 +31,8 @@ Every day, we lean forward into the light of our brightest designs
 `)
 
 	fmt.Printf("Decimal: %d, Binary: %b, hex: %x\n", age, age, age)
+
+	fmt.Printf("%v is %T; %v is %T\n", iVar, iVar, dVar, dVar)
+
+	fmt.Println("The time is", time.Now())
 }
