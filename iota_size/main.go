@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 const (
-	_ = iota
-	KB
+	_  = iota
+	KB = 1 << (10 * iota)
 	MB
 	GB
 	TB
@@ -13,10 +13,10 @@ const (
 )
 
 func main() {
-	fmt.Printf("%d\t%b", KB, KB) // kb
-	fmt.Printf("%d\t%b", MB, MB) // mb
-	fmt.Printf("%d\t%b", GB, GB) // gb
-	fmt.Printf("%d\t%b", TB, TB) // tb
-	fmt.Printf("%d\t%b", PB, PB) // pb
-	fmt.Printf("%d\t%b", EB, EB) // eb
+	fmt.Printf("%d\t\t\t%b\n", KB, KB) // kb
+	fmt.Printf("%d\t\t\t%b\n", MB, MB) // mb
+	fmt.Printf("%d\t\t%b\n", GB, GB)   // gb
+	fmt.Printf("%d\t\t%b\n", TB, TB)   // tb
+	fmt.Printf("%d\t%b\n", PB, PB)     // pb
+	fmt.Printf("%d\t%b\n", EB, EB)     // eb
 }
